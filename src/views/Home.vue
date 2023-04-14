@@ -1,18 +1,15 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <n-ve-table
+      ref="tableRef"
+      :table-columns="tableColumns"
+      :table-data="tableData"
+      :is-close-loading-instance="isCloseLoadingInstance"
+      :veoption="veoption"
+      :use-default-add-col="true"
+    >
+    </n-ve-table>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
-</script>
+<script lang="ts" src="./home.ts"></script>
