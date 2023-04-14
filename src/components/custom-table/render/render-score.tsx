@@ -5,7 +5,6 @@ import { ColumnFields } from "../types/data-inter";
  */
 export function getScoreRenderCell(row: any, column: ColumnFields, h: any) {
   let model = row[column.field];
-  console.log(model, row, column.field);
   const show = !isNaN(Number(model)) && Number(model) > 0;
   if (show) {
     model = Number(model);

@@ -3,12 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-import { veLoading } from "vue-easytable";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 
-Vue.prototype.$veLoading = veLoading;
 new Vue({
   router,
   render: (h) => h(App),
