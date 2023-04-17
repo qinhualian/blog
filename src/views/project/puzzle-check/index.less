@@ -1,0 +1,92 @@
+.puzzle-check {
+  position: relative;
+  .jigsaw {
+    width: 400px;
+    height: 300px;
+    background: url("../../../assets/images/puzzle-check/拼图.png") no-repeat;
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #fff;
+      position: absolute;
+      top: 90px;
+      left: 270px;
+    }
+    .check-child {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border: 1px solid #fff;
+      background-image: inherit;
+      background-repeat: inherit;
+      background-size: 742px 630px;
+      background-position: -270px -90px;
+      position: absolute;
+      top: 90px;
+      left: 10px;
+    }
+  }
+
+  .drag {
+    width: 400px;
+    height: 50px;
+    background-color: #e3e3e3;
+    margin-top: 10px;
+    position: relative;
+    > span {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+    }
+    .drag-child {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      background-color: #f6d5d5;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+
+      > i {
+        animation: arrow-guide 2s linear infinite; //  linear匀速 infinite循环
+      }
+
+      @keyframes arrow-guide {
+        0% {
+          transform: translate(-30px, 0);
+          opacity: 0.75;
+        }
+        25% {
+          transform: translate(-15px, 0);
+        }
+
+        50% {
+          transform: translate(0px, 0);
+          opacity: 1;
+        }
+        75% {
+          transform: translate(15px, 0);
+          opacity: 0.75;
+        }
+
+        100% {
+          transform: translate(30px, 0);
+          opacity: 0;
+        }
+      }
+    }
+    .slide-drag {
+      // transition: all 1s;
+    }
+  }
+}

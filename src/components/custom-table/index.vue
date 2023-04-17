@@ -5,7 +5,7 @@
     class="collect-nsoc-ve-table"
     :columns="showTableColumns"
     :table-data="showTableData"
-    v-bind="veoption"
+    v-bind="showVeoption"
   ></ve-table>
 </template>
 
@@ -15,16 +15,10 @@ import zhCN from "vue-easytable/libs/locale/lang/zh-CN";
 import { Vue, Component, Watch } from "vue-property-decorator";
 
 import "./style/easytable-theme.less";
-import { veLoading } from "vue-easytable";
 import { ColumnFields, RowFields } from "./types/data-inter";
-import {
-  closeLoadingInstance,
-  showLoadingInstance,
-} from "./loading/loading-instance";
 
 import VE_OPTIONS from "./loading/ve-config";
 import { getRenderHeaderByType } from "./render/render-column";
-Vue.prototype.$veLoading = veLoading;
 VeLocale.use(zhCN);
 @Component({
   components: {
@@ -86,6 +80,20 @@ export default class NVeTable extends Vue {
   get showLoading() {
     return this.$props.isCloseLoadingInstance;
   }
+
+  get showVeoption() {
+    let veoption = { ...this.$props.veoption };
+    if (this.$props.useDefaultRowIndex) {
+      veoption = {
+        ...veoption,
+        virtualScrollOption: {
+          ...veoption.virtualScrollOption,
+          scrolling: this.virtualScrolling,
+        },
+      };
+    }
+    return veoption;
+  }
   /**
    *  开启加载
    */
@@ -96,8 +104,6 @@ export default class NVeTable extends Vue {
     //   name: "wave",
     // });
     // showLoadingInstance(this.loadingInstance);
-    // console.log(this.$veLoading);
-
     document.addEventListener("contextmenu", (e: MouseEvent) => {
       e.preventDefault();
     });
@@ -343,6 +349,21 @@ export default class NVeTable extends Vue {
         background-color: #f49a41 !important;
       }
     }
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #89d8be;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar {
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #89d8be;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ebeef5; // 背景色
   }
 }
 .collect-nsoc-ve-table__has_footer,

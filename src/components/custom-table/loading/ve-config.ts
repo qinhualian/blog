@@ -44,7 +44,7 @@ const VE_OPTIONS: any = {
   borderY: true,
   scrollWidth: 0, // 表格滚动区域的宽（开始出滚动条的宽度）
   fixedHeader: true, // 是否固定表头，默认启用。需要和 `maxHeight`结合使用
-  maxHeight: "100%", // 表格的最大高度
+  maxHeight: "500px", // 表格的最大高度
   rowKeyFieldName: "rowKey", // 指定 row key 的字段名称
   style: "width: 100%",
 };

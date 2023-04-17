@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="q-table">
     <n-ve-table
       ref="tableRef"
       :table-columns="tableColumns"
@@ -12,4 +12,5 @@
   </div>
 </template>
 
-<script lang="ts" src="./home.ts"></script>
+<script lang="ts" src="./index.ts"></script>
+<style lang="less" src="./index.less"></style>

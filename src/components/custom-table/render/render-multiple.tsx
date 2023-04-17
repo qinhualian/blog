@@ -9,12 +9,8 @@ export function getMultipleRenderCell(
   h: any,
   disabled?: boolean
 ) {
-  let model = row[column.field];
-  try {
-    model = JSON.parse(row[column.field]);
-  } catch (error) {
-    model = [];
-  }
+  const model = row[column.field];
+
   return (
     <el-select
       size="small"
@@ -23,7 +19,7 @@ export function getMultipleRenderCell(
       disabled={disabled}
       value={model}
       on-input={(val: string) => {
-        row[column.field] = JSON.stringify(val);
+        row[column.field] = val;
       }}
       placeholder="请选择"
     >

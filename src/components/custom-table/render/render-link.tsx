@@ -6,9 +6,11 @@ import { ColumnFields } from "../types/data-inter";
 export function getLinkRenderCell(row: any, column: ColumnFields, h: any) {
   const content = row[column.field];
   if (content) {
-    <a href={content} target="_blank">
-      {content}
-    </a>;
+    return (
+      <a href={content} target="_blank">
+        {content}
+      </a>
+    );
   } else {
     row[column.field] = "";
     return <span></span>;

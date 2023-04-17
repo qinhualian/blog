@@ -8,9 +8,9 @@ export interface HeaderCellEventsInter {
 //  自定义表头事件
 export function headerCellEvents(this: any, { column }: HeaderCellEventsInter) {
   return {
-    click: (event: MouseEvent) => this.handleOpenSelectByAdd(column, event),
-    dblclick: (event: MouseEvent) =>
-      this.dblclickHeaderCellEvents(column, event),
+    // click: (event: MouseEvent) => this.handleOpenSelectByAdd(column, event),
+    // dblclick: (event: MouseEvent) =>
+    //   this.dblclickHeaderCellEvents(column, event),
   };
 }
 

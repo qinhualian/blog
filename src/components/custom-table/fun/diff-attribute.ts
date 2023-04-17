@@ -71,11 +71,7 @@ export function getInitVEoption(this: any) {
       ...this.veoption.sortOption,
       sortChange: (data: any) => sortChange.call(this, data),
     },
-    virtualScrollOption: {
-      ...this.veoption.virtualScrollOption,
-      scrolling: (data: virtualScrollInter) =>
-        virtualScrolling.call(this, data),
-    },
+
     cellAutofillOption: {
       ...this.veoption.clipboardOption,
       beforeAutofill: (data: any) => beforeAutofill.call(this, data),
@@ -97,8 +93,9 @@ function getCommonVeoption(this: any, veoption: any) {
       beforeCut: (data: afterMenuClickType) => beforePasteCut.call(this, data),
     },
     editOption: {
-      // beforeCellValueChange: (data: CellValueChangeType) =>
-      //   beforeCellValueChange.call(this, data),
+      beforeCellValueChange: (data: CellValueChangeType) => {
+        // console.log(data);
+      },
       // afterCellValueChange: (data: CellValueChangeType) =>
       //   afterCellValueChange.call(this, data),
     },

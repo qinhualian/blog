@@ -5,6 +5,7 @@ import {
   getRenderCellByType,
   getRenderHeaderByType,
 } from "../render/render-column";
+import { getRandomId } from "@/comment-fun/random-id";
 interface CustomFieldsInter {
   icon: string;
   columntype: columntypeEnum;
@@ -34,13 +35,13 @@ export const FieldsTypeList: CustomFieldsInter[] = [
   {
     icon: "icon_selection",
     columntype: columntypeEnum.SINGLE_CHOICE,
-    source: [],
+    source: ["1", "2", "3"],
     title: "单选",
   },
   {
     icon: "icon_checkbox",
     columntype: columntypeEnum.MULTIPLE_CHOICE,
-    source: [],
+    source: ["1", "2", "3"],
     title: "多选",
   },
   {
@@ -48,6 +49,8 @@ export const FieldsTypeList: CustomFieldsInter[] = [
     columntype: columntypeEnum.DATE,
     title: "日期",
     dateType: "date", // 日期选择器的类型 date年月日 month年月 datetime年月日时间
+    normalFormat: "yyyy-MM-dd",
+    monthFormat: "yyyy-MM",
   },
   { icon: "link", columntype: columntypeEnum.LINK, title: "链接" },
   {
@@ -81,6 +84,7 @@ export function getFormatData(disabled = false): any {
     (item: CustomFieldsInter, index: number) => {
       item.renderBodyCell;
       return {
+        ...item,
         field: item.columntype,
         key: item.columntype + "_" + index,
         title: item.title,
@@ -88,24 +92,24 @@ export function getFormatData(disabled = false): any {
         edit: disabled ? false : isAllowEdit(item.columntype),
         hide: true,
         sortBy: "",
-        columntype: item.columntype,
         renderBodyCell: getRenderCellByType,
         renderHeaderCell: getRenderHeaderByType,
       };
     }
   );
   const tableData: RowFields[] = [];
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 50; i++) {
     tableData.push({
-      TEXT: "You can't edit",
-      DATE: "1900-05-20",
+      TEXT: "edit" + i,
+      DATE: "2023-04-17",
       MULTIPLE_CHOICE: ["1"],
-      CHINESE_CURRENCY: 200,
+      CHINESE_CURRENCY: 200 + i,
       SCORE: 2,
-      PROGRESS_BAR: 30,
-      SINGLE_CHOICE: "a",
-      NUMBER: "5",
-      rowKey: i,
+      PROGRESS_BAR: i,
+      SINGLE_CHOICE: "1",
+      NUMBER: 6 + i,
+      LINK: "www.baidu.com",
+      rowKey: getRandomId(),
     });
   }
 

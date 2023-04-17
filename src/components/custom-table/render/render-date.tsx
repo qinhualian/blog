@@ -21,7 +21,7 @@ export function getDateRenderCell(
       }}
       disabled={disabled}
       format={getShowFormatdate(column)}
-      value-format="yyyy-MM-dd HH:mm:ss"
+      value-format="yyyy-MM-dd"
       placeholder="选择日期"
     ></el-date-picker>
   );
