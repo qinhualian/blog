@@ -3,8 +3,8 @@
     <el-container>
       <HeadPage></HeadPage>
       <el-container>
-        <BorderBar></BorderBar>
-        <el-main> </el-main>
+        <HeadMain></HeadMain>
+
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>

@@ -1,0 +1,38 @@
+.homepage-mian {
+  width: 100%;
+  .homepage-mian__item {
+    height: 100vh;
+    width: 100%;
+  }
+  .homepage-mian__cover {
+    background-attachment: fixed;
+    position: relative;
+    background-image: url(../../../assets/images/homepage/封面背景图.jpg);
+    .homepage-mian__cover__arrow {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      // &:before {
+      //   content: "\f107";
+      // }
+    }
+  }
+  .homepage-mian__card {
+    display: flex;
+    > .content {
+      margin: auto;
+      width: 65%;
+      height: 100%;
+      border: 1px solid pink;
+      display: flex;
+      .content__mian {
+        flex: 1;
+        margin-right: 50px;
+      }
+      .content__side {
+        width: 300px;
+        background-color: red;
+      }
+    }
+  }
+}

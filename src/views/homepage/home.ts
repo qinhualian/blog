@@ -1,11 +1,11 @@
 import { Component, Vue } from "vue-property-decorator";
-import BorderBar from "../project/echarts/bar/border-bar.vue";
 import HeadPage from "./head/index.vue";
+import HeadMain from "./mian/index.vue";
 
 @Component({
   components: {
     HeadPage,
-    BorderBar,
+    HeadMain,
   },
 })
 export default class HomePage extends Vue {}

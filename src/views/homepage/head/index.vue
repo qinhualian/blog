@@ -1,5 +1,5 @@
 <template>
-  <el-header class="homepage_head">qq </el-header>
+  <el-header class="homepage-head"> </el-header>
 </template>
 
 <script lang="ts" src="./index.ts"></script>
