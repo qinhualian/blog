@@ -3,8 +3,7 @@
     <el-container>
       <HeadPage></HeadPage>
       <el-container>
-        <BorderBar></BorderBar>
-        <el-main> </el-main>
+        <el-main> 55</el-main>
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>

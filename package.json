@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "echarts": "^5.4.2",
     "element-ui": "^2.15.13",
+    "eslint-plugin-import": "^2.27.5",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-easytable": "^2.24.0",
