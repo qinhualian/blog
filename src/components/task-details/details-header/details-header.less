@@ -1,0 +1,59 @@
+.details-header-content {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 300px auto 500px;
+  align-items: center;
+  .task-title {
+    height: 30px;
+    border-right: 1px solid rgba(15, 171, 114, 0.4);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    > p {
+      width: 100%;
+      font-weight: bold;
+      color: #333333;
+      > i {
+        margin: 0 10px;
+        transform: scale(1.2);
+        font-weight: bold;
+      }
+    }
+  }
+  .task-tools {
+    img {
+      margin: 0 15px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .task-history {
+    display: flex;
+    justify-content: flex-end;
+    .el-select {
+      width: 230px;
+      border-radius: 2px;
+      .el-input {
+        .el-input__inner {
+          border: 1px solid rgba(23, 26, 29, 0.16);
+          height: 32px;
+        }
+      }
+    }
+    .task-history-right {
+      cursor: pointer;
+      margin: 0 30px;
+      width: 118px;
+      height: 32px;
+      border-radius: 2px;
+      border: 1px solid rgba(23, 26, 29, 0.16);
+      display: flex;
+      align-items: center;
+      img {
+        margin: 0 10px;
+      }
+    }
+  }
+}

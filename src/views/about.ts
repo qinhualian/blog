@@ -1,10 +1,10 @@
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component({
-  components: {},
+  components: {}
 })
 export default class HelloWorld extends Vue {
-  public isCloseLoadingInstance = true;
+  public isCloseLoadingInstance = true
   public ceated() {}
   public test() {}
 }

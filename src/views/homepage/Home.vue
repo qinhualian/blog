@@ -8,20 +8,10 @@
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container> -->
+    <task-details></task-details>
   </div>
 </template>
 
-<!-- <script lang="ts" src="./home.ts">
+<script lang="ts" src="./home.ts"></script>
 
-</script> -->
-<script>
-  let count = 0
-  const nums = [0, 1, 2, 3]
-
-  nums.forEach((num) => {
-    if (num) count += num
-  })
-
-  console.log(count)
-</script>
 <style lang="less" src="./home.less"></style>

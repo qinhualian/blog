@@ -3,7 +3,7 @@
     <el-container>
       <el-header>Header</el-header>
       <el-container>
-        <el-main>Main</el-main>
+        <el-main> </el-main>
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>

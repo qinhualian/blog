@@ -1,0 +1,83 @@
+.details-aside-content {
+  // display: flex;
+  // flex-direction: column;
+  width: 100%;
+  height: 100%;
+  .aside-query {
+    width: 300px;
+    height: 80px;
+    display: flex;
+    .el-input {
+      width: 248px;
+      margin: auto;
+    }
+  }
+  .aside-menu {
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 80px);
+    .el-collapse {
+      width: 100%;
+      border-top: 0;
+      border-bottom: 1px solid rgba(15, 171, 114, 0.14);
+      height: calc(100vh - 120px);
+      overflow: auto;
+
+      .el-collapse-item {
+        .el-collapse-item__header {
+          font-weight: bold;
+          background: transparent;
+          border-bottom: 1px solid rgba(15, 171, 114, 0.14);
+          .el-collapse-item__arrow {
+            display: none;
+          }
+          .item__arrow {
+            font-weight: bold;
+            margin: 0 15px 0 10px;
+          }
+        }
+        .el-collapse-item__wrap {
+          background: transparent;
+          border-bottom: 1px solid rgba(15, 171, 114, 0.14);
+          .aside-collapse-active {
+            padding: 0 10px;
+            height: 350px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            align-items: center;
+            justify-content: center;
+            .way-box {
+              width: fit-content;
+              min-height: 100px;
+              height: fit-content;
+              padding: 10px 10px 0 10px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              &:hover {
+                background: rgba(255, 255, 255, 0.5);
+              }
+              > i {
+                width: 37px;
+                height: 37px;
+                display: flex;
+              }
+              > span {
+                margin-top: 10px;
+                width: 70px;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .is-active {
+        .el-collapse-item__header {
+          background: rgba(30, 193, 130, 0.2);
+        }
+      }
+    }
+  }
+}
